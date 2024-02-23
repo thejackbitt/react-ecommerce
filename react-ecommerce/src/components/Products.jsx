@@ -1,4 +1,10 @@
 export default function Products(props) {
+
+  function addToCart(e){
+    e.preventDefault()
+    props.setCart([...props.cart, props.setCart])
+}
+
   return (
     <>
       <table className="table">
@@ -15,6 +21,9 @@ export default function Products(props) {
               <td>{product.name}</td>
               <td>{product.price}</td>
               <td>{product.qty}</td>
+              <td>
+                <button onClick={() => props.setCart(product)}>Add to Cart</button>
+                </td>
             </tr>
           ))}
         </tbody>
