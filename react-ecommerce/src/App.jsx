@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Products from "./components/Products";
+import Cart from "./components/Cart";
+import storeDb from "/storeDb.json";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+export default function App() {
+  
 
   return (
     <>
     </>
-  )
+  );
 }
-
-export default App
