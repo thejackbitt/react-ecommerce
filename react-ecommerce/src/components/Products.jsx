@@ -9,7 +9,6 @@ export default function Products(props) {
             <th>Quantity</th>
           </tr>
         </thead>
-
         <tbody>
           {props.products.map((product) => (
             <tr key={product.id}>
