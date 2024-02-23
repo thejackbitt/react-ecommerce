@@ -1,4 +1,10 @@
 export default function Products(props) {
+
+  function addToCart(e) {
+    e.preventDefault()
+    props.setCart([...props.cart, props.newCart])
+}
+
   return (
     <>
       <table className="table">

@@ -1,13 +1,27 @@
-export default function Cart(props){
+export default function Cart(props) {
 
 
-    function addToCart(e){
-        e.preventDefault()
-        props.setCart([...props.cart, props.newCart])
-    }
-    return(
+    return (
         <>
-        
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {props.cart.map((product) => (
+                        <tr key={product.id}>
+                            <td>{product.name}</td>
+                            <td>{product.price}</td>
+                            <td>{product.qty}</td>
+                            <td><button onClick={() => props.setCart([...cart, product])}>Add to Cart</button></td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </>
     )
 }
