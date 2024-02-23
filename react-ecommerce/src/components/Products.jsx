@@ -12,7 +12,9 @@ export default function Products(props) {
         <tbody>
           {props.products.map((product) => (
             <tr key={product.id}>
-              <td>{product.name}</td>
+              <td>
+                <span onClick={() => props.setCart([...cart, product])}>{product.name}</span>
+              </td>
               <td>{product.price}</td>
               <td>{product.qty}</td>
             </tr>
