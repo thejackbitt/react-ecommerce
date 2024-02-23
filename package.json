@@ -1,0 +1,12 @@
+{
+  "name": "react-ecommerce",
+  "version": "1.0.0",
+  "description": "An ecommerce mini-project to practice React development and DB interaction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
