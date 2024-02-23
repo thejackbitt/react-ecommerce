@@ -8,7 +8,8 @@ export default function Products(props) {
 
   function addToCart(e){
     e.preventDefault()
-    props.setCart([...props.cart, props.setCart])
+    props.setCart([...props.cart, props.product])
+    console.log(props.cart);
 }
 
   return (
