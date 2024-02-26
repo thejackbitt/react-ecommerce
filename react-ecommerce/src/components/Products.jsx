@@ -1,9 +1,16 @@
 export default function Products(props) {
 
   function addToCart(product){
+    const oldProduct = props.cart.find(x => x.id === product.id)
+    if (!oldProduct) {
     const newProduct = {...product, qty:1}
     props.setCart([...props.cart, newProduct])
     console.log(props.cart);
+    } else {
+      oldProduct.qty++
+      props.setCart([...props.cart])
+      console.log(props.cart);
+    }
 }
 
   return (
